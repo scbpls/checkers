@@ -250,7 +250,7 @@ function goTop(i, j) {
                 if (board[i+2][j+2].attributes["taken"].value == 0 && board[i+1][j+1].firstChild && (i < (size - 2))) {
                     if (board[i+1][j+1].firstChild.className == "black") {
                         let indexRightFurther2 = document.getElementById((i+2)+''+(j+2));
-                        indexLeftFurther2.style.backgroundColor = "red";
+                        indexRightFurther2.style.backgroundColor = "red";
                         let choosen = document.createAttribute('onclick');
                         choosen.value = "move("+i+','+j+','+(i+2)+','+(j+2)+",'goDown',"+(i+1)+','+(j+1)+");";
                         indexRightFurther2.setAttributeNode(choosen);
