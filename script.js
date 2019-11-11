@@ -98,14 +98,14 @@ function move(originI, originJ, destI, destJ, target, attackI, attackJ) {
     const original = board[originI][originJ];
     const desc = board[destI][destJ];
     let temp = original.innerHTML;
-    original.attributes["taken"].value = "0";
+    original.attributes["taken"].value = 0;
     original.innerHTML = "";
     desc.innerHTML = temp;
     desc.attributes["onclick"].value = "";
     target = desc.firstChild.className == 'black' ? 'goDown' : 'goTop';
     desc.firstChild.attributes["onclick"].value = target+`(${destI},${destJ})`;
     let taken = document.createAttribute('taken');
-    taken.value = "1";
+    taken.value = 1;
     board[destI][destJ].setAttributeNode(taken);
     cleanChoice();
     if (attackI && attackJ) {
