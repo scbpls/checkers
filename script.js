@@ -202,9 +202,9 @@ function goTop(i, j) {
             indexLeft.setAttributeNode(choosen);
         }
         if (j > 1) {
-            if(i > 1){
+            if (i > 1){
                 if (board[i-2][j-2].attributes["taken"].value == 0 && board[i-1][j-1].firstChild) {
-                    if(board[i-1][j-1].firstChild.className == "black"){
+                    if (board[i-1][j-1].firstChild.className == "black") {
                         let indexLeftFurther1 = document.getElementById((i-2)+''+(j-2));
                         indexLeftFurther1.style.backgroundColor = "red";
                         let choosen = document.createAttribute('onclick');
@@ -215,7 +215,7 @@ function goTop(i, j) {
             }
             if(i < (size - 2)){
                 if (board[i+2][j-2].attributes["taken"].value == 0 && board[i+1][j-1].firstChild) {
-                    if(board[i+1][j-1].firstChild.className == "black"){
+                    if (board[i+1][j-1].firstChild.className == "black") {
                         let indexLeftFurther2 = document.getElementById((i+2)+''+(j-2));
                         indexLeftFurther2.style.backgroundColor = "red";
                         let choosen = document.createAttribute('onclick');
